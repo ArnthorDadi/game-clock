@@ -14,8 +14,6 @@ import { connect } from 'react-redux';
 
 export interface ICreateRoom {
     Name: string
-    Minutes: number
-    RepetedMinutes: number
 }
 
 interface IStateCreateRoom {
@@ -36,9 +34,7 @@ class CreateRoom extends Component<IPropCreateRoom, IStateCreateRoom> {
         this.state = {
             socket: socket.socket,
             roomToBeCreated: {
-                Name: "",
-                Minutes: -1,
-                RepetedMinutes: -1
+                Name: ""
             },
             errorMessage: ""
         };
@@ -60,12 +56,10 @@ class CreateRoom extends Component<IPropCreateRoom, IStateCreateRoom> {
 
     createRoom = () => {
         const { socket } = this.state;
-        const { Name, Minutes, RepetedMinutes } = this.state.roomToBeCreated;
+        const { Name } = this.state.roomToBeCreated;
 
         var newRoom = {
-            Name: Name,
-            Minutes: Minutes,
-            RepetedMinutes: RepetedMinutes
+            Name: Name
         };
 
         socket.emit("add-room", newRoom, (success: boolean, errorMessage: string) => {
@@ -86,23 +80,6 @@ class CreateRoom extends Component<IPropCreateRoom, IStateCreateRoom> {
         });
     }
 
-    changeTime = (event: any) => {
-        this.setState(prevState => {
-            let roomToBeCreated = Object.assign({}, prevState.roomToBeCreated);
-            roomToBeCreated.Minutes = parseInt(event.target.value.toString())
-            return { roomToBeCreated };
-        });
-
-    }
-
-    changeRepetedTime = (event: any) => {
-        this.setState(prevState => {
-            let roomToBeCreated = Object.assign({}, prevState.roomToBeCreated);
-            roomToBeCreated.RepetedMinutes = parseInt(event.target.value.toString())
-            return { roomToBeCreated };
-        });
-    }
-
     render() {
         const { errorMessage } = this.state;
         return (
@@ -110,9 +87,6 @@ class CreateRoom extends Component<IPropCreateRoom, IStateCreateRoom> {
                 <h1>Create Room!</h1>
                 <form onSubmit={this.submitNewRoom}>
                     <input placeholder="Room Name..." type="text" onChange={this.changeName} /><br />
-                    <input placeholder="Time..." type="number" onChange={this.changeTime} /><br />
-                    <input placeholder="Repeated Time..." type="number" onChange={this.changeRepetedTime} />
-                    <p>Time is in minutes</p>
                     {errorMessage !== "" && <p>{errorMessage}</p>}
                     <div className="buttons">
                         <button onClick={() => this.props.history.push('/rooms')}>Cancel</button>
