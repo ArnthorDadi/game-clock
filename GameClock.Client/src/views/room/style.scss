@@ -1,0 +1,100 @@
+$seperator-color: rgba(121, 121, 121, 0.25);
+
+.room-view {
+  margin-bottom: 70px;
+}
+
+.room-view h1 {
+  margin: 70px 0;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.start-game {
+  width: 100%;
+  padding: 1rem 0.7rem;
+  border: none;
+  border-radius: 3px;
+  background-image: linear-gradient(to right, #f27a54, #a154f2);
+  color: white;
+}
+
+.leave-room {
+  margin-top: 20px;
+  padding: 0.5rem 0.8rem;
+  border: solid white 1px;
+  border-radius: 50px;
+  background: transparent;
+  color: white;
+}
+
+.time {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1.1fr;
+  grid-template-rows: 1fr;
+
+  div p {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  div:nth-child(2) {
+    text-align: right;
+  }
+}
+
+.glow {
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.user {
+  position: relative;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.user::before {
+  content: '';
+  position: absolute;
+
+  bottom: -15px;
+  left: -24px;
+
+  height: 0px;
+  width: calc(100% + 10px);
+  border: 1px solid $seperator-color;
+}
+
+.host {
+  font-size: 40px;
+  color: orange;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.users-list {
+  margin-bottom: calc(30px + 30px);
+}
+
+$from: 10px;
+$to: 20px;
+
+$from-color: rgb(59, 59, 59);
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 $from $from-color, 0 0 $from $from-color,
+      0 0 $from $from-color, 0 0 $from $from-color, 0 0 $from $from-color,
+      0 0 $from $from-color, 0 0 $from $from-color;
+  }
+  to {
+    text-shadow: 0 0 $to #fff, 0 0 $to #ff4da6, 0 0 $to #ff4da6, 0 0 $to #ff4da6,
+      0 0 $to #ff4da6, 0 0 $to #ff4da6, 0 0 $to #ff4da6;
+  }
+}

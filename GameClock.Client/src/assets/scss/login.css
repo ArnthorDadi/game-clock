@@ -1,0 +1,83 @@
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo > img {
+  width: clamp(250px, 80%, 300px);
+  height: auto;
+}
+
+.title {
+  margin: 0 0 40px 0;
+  text-align: center;
+  font-size: clamp(3rem, -0.9rem + 20vw, 6rem);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.description-text {
+  text-align: center;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
+  margin-bottom: 50px;
+}
+
+.form-error {
+  color: rgb(236, 63, 63);
+}
+
+.formInputs {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: white;
+  width: clamp(300px, 100%, 600px);
+}
+
+.input-username {
+  height: 44px;
+  width: 60%;
+  line-height: 30px;
+  font-size: 20px;
+  padding: 0;
+  margin: 3px;
+  margin-left: 20px;
+  border: none;
+  color: #9479ff;
+  font-style: bold;
+  font-weight: 1000;
+  font-size: 1.2rem;
+}
+.input-username:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #9479ff;
+  opacity: 0.78;
+  font-style: bold;
+  font-weight: 1000;
+  font-size: 1.2rem;
+}
+
+.input-submit {
+  position: absolute;
+  height: 100%;
+  line-height: 50px;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0 30px 0 30px;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #f27a54, #a154f2);
+  color: white;
+}
+
+.input-submit:hover {
+  cursor: pointer;
+}

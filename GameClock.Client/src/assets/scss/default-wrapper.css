@@ -1,0 +1,6 @@
+/* Default */
+.center-wrapper {
+  overflow: hidden;
+  margin-left: clamp(30px, 5%, 500px);
+  margin-right: clamp(30px, 5%, 500px);
+}

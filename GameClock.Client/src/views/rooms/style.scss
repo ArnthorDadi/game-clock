@@ -1,0 +1,96 @@
+:root {
+  --shader: 0, 0, 0;
+}
+
+.purple {
+  color: #a154f2;
+  margin: 0;
+}
+
+.logout-button {
+  margin-top: 15px;
+  padding: 7px 13px;
+  color: white;
+  background: none;
+  border: none;
+  border-radius: 3px;
+  background-image: linear-gradient(to right, #f27a54, #a154f2);
+}
+
+.create-room-button {
+  width: 100%;
+  height: 2rem;
+  background-image: linear-gradient(to right, #f27a54, #a154f2);
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.rooms {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  gap: 20px 20px;
+
+  margin-top: 20px;
+  width: 100%;
+}
+
+.room {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  min-width: 215px;
+  height: auto;
+
+  aspect-ratio: 16/9;
+  border-radius: 3px;
+  color: white;
+  border: none;
+
+  img {
+    position: absolute;
+    z-index: -2;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+  }
+
+  p {
+    position: absolute;
+
+    left: 15px;
+    bottom: 10px;
+  }
+
+  .shader {
+    position: absolute;
+    z-index: -1;
+
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+      0deg,
+      rgba(var(--shader), 1) 0%,
+      rgba(var(--shader), 0.4) 20%,
+      rgba(var(--shader), 0) 100%
+    );
+  }
+}

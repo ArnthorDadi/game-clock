@@ -1,0 +1,54 @@
+.create-room {
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    input {
+      height: 2rem;
+      border: none;
+      border-radius: 3px;
+      padding: 0.2em 0.7em;
+      width: calc(100% - (0.7em * 2));
+    }
+
+    ::placeholder {
+      padding-left: 10px;
+    }
+
+    p {
+      text-align: center;
+      padding: 0;
+      margin: 10px 0;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  input {
+    width: 45% !important;
+    border: none;
+    border-radius: 3px;
+
+    background-image: linear-gradient(to right, #f27a54, #a154f2);
+
+    color: white;
+  }
+
+  button {
+    width: 45%;
+    height: 2rem;
+    border: solid white 1px;
+    border-radius: 3px;
+    background: transparent;
+    color: white;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "villainsclock.server",
+  "version": "1.0.0",
+  "description": "Websocket server that holds onto users and rooms that are in the server at any given time and manages them and their relation",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon .",
+    "test": "npm run test"
+  },
+  "keywords": [
+    "websocket",
+    "server"
+  ],
+  "author": "ArnthorDadi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "socket.io": "^4.2.0"
+  }
+}

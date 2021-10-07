@@ -1,0 +1,42 @@
+.center-text {
+  text-align: center;
+}
+
+.login-form {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.username {
+  color: rgb(99, 99, 99) !important;
+  height: 2rem;
+  margin-left: 20px;
+  width: calc(100% - 0.7em * 2);
+  border: none;
+  padding: 0.2em 0.7em;
+  border-radius: 0 100px 100px 0;
+}
+
+.username:focus {
+  outline: none;
+}
+
+.submit {
+  position: absolute;
+
+  width: clamp(50px, 20%, 200px);
+  height: 100%;
+  right: 0;
+  top: 0;
+
+  border: none;
+  border-radius: 0 3px 3px 0;
+  background-image: linear-gradient(to right, #f27a54, #a154f2);
+  color: white;
+}
+
+.form-error-message {
+  color: rgb(236, 63, 63);
+}

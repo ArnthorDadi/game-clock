@@ -1,0 +1,32 @@
+.header {
+  margin-top: 70px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo > img {
+  width: clamp(10px, 80%, 100px);
+  height: auto;
+}
+
+.title {
+  margin: 20px 0 0 0;
+  text-align: center;
+  font-size: clamp(3rem, -0.9rem + 19vw, 6rem);
+}
+
+.btn-logout {
+  position: absolute;
+  line-height: 30px;
+  left: 30px;
+  top: 30px;
+  margin: 0;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #f27a54, #a154f2);
+  color: white;
+}

@@ -1,0 +1,106 @@
+.btn-create-room {
+  margin: 40px 0 0 0;
+  height: 50px;
+  width: 100%;
+  font-size: 1.2rem;
+  font-style: bold;
+  border: none;
+  border-radius: 3px;
+  background-image: linear-gradient(to right, #f27a54, #a154f2);
+  color: white;
+}
+
+.search-form {
+  margin: 20px 0 0 0;
+}
+
+.room {
+  z-index: 1;
+  aspect-ratio: 16/9;
+  position: relative;
+  margin: 20px 0 0 0;
+  border: none;
+  border-radius: 3px;
+}
+
+.room img {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.room-users {
+  position: absolute;
+  display: block;
+  padding-left: 10px;
+  top: 35px;
+  left: 0px;
+}
+
+.room-users::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  border-radius: 0 20px 20px 0;
+  height: 32px;
+  width: 60px;
+  background: linear-gradient(to right, #f27a54, #a154f2);
+}
+
+.room-users p {
+  margin: 0 0 0 10px;
+  display: inline-block;
+}
+
+.room-text {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.room-text h1 {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 28px;
+}
+
+.host {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #f27a54;
+}
+
+.time {
+  margin: 0;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.shader {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
