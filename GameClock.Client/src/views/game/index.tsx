@@ -74,7 +74,9 @@ class Game extends Component<IPropGame, IStateGame> {
 
     endTurn = (): void => {
         const { name } = this.props.match.params;
-        const { hasUserRanOutOfTime, clockResetKey, socket } = this.state;
+        const { hasUserRanOutOfTime, clockResetKey, socket, isPlayerTurn } = this.state;
+
+        if (isPlayerTurn == false) return;
 
         if (hasUserRanOutOfTime) {
             this.setState({

@@ -41,30 +41,8 @@ function Room() {
   };
 }
 
-// Should be taken out in production
-// Create default user
-let user = createUser("Arnthor-Dadi-Jonasson");
-
-// Create default room
-let usernameInLower = setToLowerCase(user.Username);
-let room = new Room();
-room.Host = user;
-room.Name = "Villains Room!";
-//room.addUser(user);
-// End of code that should be removed in production
-
 users = {};
 rooms = {};
-
-users[usernameInLower] = user;
-rooms[setToLowerCase(room.Name)] = room;
-
-for (let i = 0; i < 10; i++) {
-  let room = new Room();
-  room.Host = user;
-  room.Name = `Room number: ${i.toString()}`;
-  rooms[setToLowerCase(room.Name)] = room;
-}
 
 io.on("connection", function (socket) {
   //console.log(socket);
