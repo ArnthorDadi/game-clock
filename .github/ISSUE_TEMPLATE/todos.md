@@ -2,7 +2,7 @@
 name: Todos
 about: These are the todos/tickets for the Game Clock project
 title: "\U0001F984 Ticket"
-labels: Todo
+labels: Todo, FE, BE
 assignees: ArnthorDadi
 
 ---
@@ -19,9 +19,9 @@ Short description of the feature
 -->
 
 # Recomended implementation order
-[ ] - First do ...
-[ ] - Then do ...
-[ ] - ...
+- [ ] First do ...
+- [ ] Then do ...
+- [ ] ...
 
 # Added information
 If there is anything else that the developer needs to know that does not fit in the above template then write it here else write 'None.'.
