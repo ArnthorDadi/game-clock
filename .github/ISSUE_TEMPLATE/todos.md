@@ -10,6 +10,9 @@ assignees: ArnthorDadi
 # FE/BE: Name of the feature
 Short description of the feature
 
+# Prerequisites Issues
+<!-- Issues that need to be finished before working on this one-->
+
 <!-- If FE then add a user flow -->
 <!-- 
 # User flow
